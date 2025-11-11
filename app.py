@@ -1,10 +1,12 @@
+import os
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import requests
 import json
-import os
 from dotenv import load_dotenv
+
+PORT = int(os.environ.get("PORT", 8501))
 
 # 加载环境变量
 load_dotenv()
@@ -170,4 +172,5 @@ with st.expander("ℹ️ 关于此演示"):
     - 直接对接银行API，实现无感数据同步
     - 构建更专业的金融知识库
     - 实现更精准的消费预测和规划
+
     """)
